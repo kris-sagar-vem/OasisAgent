@@ -158,6 +158,16 @@ def commit_plan(plan_id: str, approval_code: str, tool_context: ToolContext) -> 
     return _safe(engine.commit, plan_id, approval_code, _actor(tool_context), approver)
 
 
+def _get_agent_tool(name: str):
+    import sys
+    from pathlib import Path
+    root = str(Path(__file__).resolve().parent.parent)
+    if root not in sys.path:
+        sys.path.insert(0, root)
+    import agent.tools as at
+    return getattr(at, name)
+
+
 def predict_heat_offset(latitude: float, longitude: float) -> dict[str, Any]:
     """Call BigQuery ML ML.EXPLAIN_PREDICT against Dallas heat offset model.
 
@@ -167,20 +177,21 @@ def predict_heat_offset(latitude: float, longitude: float) -> dict[str, Any]:
         latitude: Latitude coordinate in Dallas (e.g. 32.78).
         longitude: Longitude coordinate in Dallas (e.g. -96.80).
     """
-    from ..agent.tools import explain_heat_offset as _eho
+    _eho = _get_agent_tool("explain_heat_offset")
     return _safe(_eho, latitude, longitude)
 
 
 def get_heat_frequency() -> dict[str, Any]:
     """Retrieve 7 years of station temperature history for Dallas (days >= 95F and >= 100F)."""
-    from ..agent.tools import get_heat_frequency as _ghf
+    _ghf = _get_agent_tool("get_heat_frequency")
     return _safe(_ghf)
 
 
 def run_equity_audit(selected_tract_ids: list[str] | None = None) -> dict[str, Any]:
     """Audit proposed cooling center sites against Dallas citywide demographic baselines."""
-    from ..agent.tools import run_equity_audit as _rea
+    _rea = _get_agent_tool("run_equity_audit")
     return _safe(_rea, selected_tract_ids)
+
 
 
 READ_TOOLS = [current_time, rank_zones, compare_methods, explain_zone, what_if, policy_dial,

@@ -36,15 +36,20 @@ You have access to specialized tools connected directly to BigQuery and a traine
 3. `get_heat_frequency()`: Pulls 7 years of station daily temperatures across Dallas to show long-term exposure trends (days > 95°F and > 100°F).
 4. `run_equity_audit(selected_tract_ids)`: Evaluates recommended tracts against the Dallas citywide baseline for poverty, zero-vehicle rate, and median age, confirming investments reach frontline communities.
 
-### OPERATIONAL GUIDELINES
+### OPERATIONAL GUIDELINES & EQUITY AUDIT CENTERPIECE
+- **The Equity Audit is your centerpiece**: Whenever presenting, ranking, or comparing sites, you MUST perform a post-hoc Equity Audit using `run_equity_audit` to verify whether candidate locations serve high-vulnerability, transit-dependent neighborhoods rather than affluent corridors.
+- **Rigor & Civil Rights Framing**:
+  - Explain explicitly that race was deliberately *excluded* from the predictive model features to prevent compounding historical proxies.
+  - Explain that equity is verified *post-hoc on the output* against citywide Census baselines (`run_equity_audit`), checking poverty rate, no-vehicle rate, and population density.
 - Always back claims with specific data points (degrees offset, poverty %, vehicle access %, days over 100°F).
 - When asked about locations or comparisons, run the appropriate tools to provide exact, evidence-based figures.
 - When drafting council proposals or recommendations, structure them professionally:
   1. Executive Summary & Problem Framing
-  2. Siting Recommendations (4 Cooling Centers + 1 Mobile Hydration Unit)
+  2. Siting Recommendations (Permanent Centers + Mobile Hydration Units)
   3. Physical & Historical Justification (Heat offsets + 7-year station trends)
-  4. Equity Audit (Verification against citywide averages)
+  4. **Equity Audit & Civil Rights Verification** (Citywide baseline vs. Recommended cohort multipliers)
   5. Implementation Roadmap & Council Next Steps
+
 """
 
 root_agent = Agent(

@@ -24,8 +24,10 @@ HOW TO ROUTE QUESTIONS
 - "Who should get supply first?" / priorities / rankings -> rank_zones.
 - "Is this better than what we do now?" / baselines -> compare_methods.
 - "Why did zone X get so little?" / "why not" -> explain_zone (with plan_id if a plan exists).
+- "Equity audit" / "Did this reach vulnerable areas?" / civil rights verification -> run_equity_audit.
 - "What if X had chilled storage?" / "what if lot Y had more?" -> what_if. Say that nothing was saved.
 - "What does fairness cost?" / weights / trade-offs -> policy_reviewer, or policy_dial directly.
+
 - Questions about raw data (counts, history, trends) -> data_analyst, if available.
 - "Make a plan" -> propose_plan. Then show plan ID, approval code, allocations and the headline,
   and repeat the tool's next_step text exactly. Nothing moves until a human approves.
