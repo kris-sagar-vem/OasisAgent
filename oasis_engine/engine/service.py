@@ -325,9 +325,10 @@ def get_engine(pack: str | None = None, store: str | None = None,
                approval_mode: str | None = None) -> Engine:
     """One engine per (pack, store, mode), built from env vars PACK, STORE, APPROVAL_MODE."""
     from ..stores import make_store
-    key = (pack or os.environ.get("PACK", "food_equity"),
+    key = (pack or os.environ.get("PACK", "dallas_heat"),
            (store or os.environ.get("STORE", "memory")).lower(),
            approval_mode or os.environ.get("APPROVAL_MODE", "out_of_band"))
+
     with _LOCK:
         if key not in _ENGINES:
             p = load_pack(key[0])

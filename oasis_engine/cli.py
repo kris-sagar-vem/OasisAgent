@@ -189,7 +189,8 @@ def main(argv: list[str] | None = None) -> int:
     a = ap.parse_args(argv)
     if a.cmd == "validate" and a.pack is None:
         import os
-        a.pack = os.environ.get("PACK", "food_equity")
+        a.pack = os.environ.get("PACK", "dallas_heat")
+
     handlers = {"validate": cmd_validate, "seed": cmd_seed, "reset": cmd_seed, "rank": cmd_rank,
                 "compare": cmd_compare, "dial": cmd_dial, "propose": cmd_propose, "approve": cmd_approve,
                 "commit": cmd_commit, "reject": cmd_reject, "shock": cmd_shock, "conditions": cmd_conditions,

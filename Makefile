@@ -110,9 +110,10 @@ deploy-conditions:  ## STRETCH-3: conditions agent to Cloud Run (public; synthet
 preflight:  ## Check local + cloud readiness (read-only; prints what is missing)
 	PROJECT=$(PROJECT) REGION=$(REGION) BQ_DATASET=$(BQ_DATASET) PACK=$(PACK) $(PY) scripts/preflight.py
 
-new-pack:  ## Copy food_equity to a new pack: make new-pack NAME=shelter_beds
+new-pack:  ## Copy dallas_heat to a new pack: make new-pack NAME=shelter_beds
 	@test -n "$(NAME)" || (echo "Set NAME=<pack_name>"; exit 1)
 	$(PY) scripts/new_pack.py $(NAME)
+
 
 test-cloud:  ## Live BigQuery contract test: make test-cloud PROJECT=<id> (dataset allocator_test)
 	RUN_BQ=1 STORE=bigquery BQ_PROJECT=$(PROJECT) BQ_DATASET=$(or $(TEST_DATASET),allocator_test) BQ_LOCATION=$(BQ_LOCATION) \
