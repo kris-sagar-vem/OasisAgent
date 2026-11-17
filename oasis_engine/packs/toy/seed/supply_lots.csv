@@ -1,0 +1,3 @@
+lot_id,category,quantity_total,quantity_remaining,expiry_hours,handling,origin_id,origin_lat,origin_lon,version
+L1,shelf_stable,50,50,,ambient,DEPOT,,,1
+L2,produce,30,30,6,chilled,DEPOT,,,1

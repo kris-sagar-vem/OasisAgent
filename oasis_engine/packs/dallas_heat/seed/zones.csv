@@ -1,0 +1,17 @@
+zone_id,name,need_units,vulnerability_index,deadline_hours,capacity_units,handling_supported,zone_type,lat,lon,request_seq,served_units,version,no_vehicle_share,heat_offset_f
+356795281,Jose Navarro Elementary School,6420,0.291,6,,hvac_active,school,32.784,-96.8656,1,0,1,0.452,0.41
+5929745007,Education Outreach & Vocational Training Center,2258,0.301,8,903,hvac_active,social_facility,32.7786,-96.7779,2,0,1,0.385,-0.37
+356859087,Texans Can Academy at Paul Quinn,5763,0.413,12,,hvac_active|generator_backup,school,32.6769,-96.7564,3,0,1,0.27,-0.59
+368161343,Safe Haven Homes,2956,0.39,16,1182,hvac_active,social_facility,32.7163,-96.7795,4,0,1,0.234,-0.51
+356720977,Saint Mary House of Study,2516,0.207,24,,hvac_active,school,32.8504,-96.9261,5,0,1,0.192,1.01
+356814564,The Meadows Health and Rehabilitation Center,5607,0.292,4,2242,hvac_active|generator_backup,social_facility,32.8863,-96.759,6,0,1,0.141,0.62
+356794553,Prairie Creek Academy,10362,0.267,6,,hvac_active,school,32.749,-96.6569,7,0,1,0.174,0.18
+4461241739,Trinidad Garza Early College at Mt View,6572,0.383,8,2628,hvac_active,school,32.7266,-96.9036,8,0,1,0.116,-0.19
+3163918883,Charley Taylor Recreation Center,3722,0.493,12,,hvac_active|generator_backup,community_centre,32.742,-96.9964,9,0,1,0.042,-0.32
+356720924,Saint Luke Catholic School,3456,0.32,16,1382,hvac_active,school,32.8129,-96.9583,10,0,1,0.122,0.1
+356794375,Renaissance Charter High School,5726,0.233,24,,hvac_active,school,32.8679,-96.992,11,0,1,0.135,0.8
+356794829,Memorial Preparatory School,4460,0.365,4,1784,hvac_active|generator_backup,school,32.8832,-96.6311,12,0,1,0.042,0.87
+356718811,Pilot Institute for the Deaf,2406,0.17,6,,hvac_active,school,32.819,-96.8219,13,0,1,0.199,0.36
+356702552,Conner Junior High School,3554,0.395,8,1421,hvac_active,school,32.7349,-96.6814,14,0,1,0.09,-0.26
+356859031,PASS Learning Center,4287,0.216,12,,hvac_active|generator_backup,school,32.7717,-96.8686,15,0,1,0.159,0.37
+6262841645,Casa del Lago,7544,0.29,16,3017,hvac_active,community_centre,32.8572,-96.8635,16,0,1,0.073,0.49

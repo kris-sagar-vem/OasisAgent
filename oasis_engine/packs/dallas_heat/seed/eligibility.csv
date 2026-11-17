@@ -1,0 +1,9 @@
+category,zone_type,allowed
+generator_ac_trailer,community_centre,true
+generator_ac_trailer,library,true
+generator_ac_trailer,school,true
+generator_ac_trailer,social_facility,false
+medical_cooling_trailer,social_facility,true
+medical_cooling_trailer,community_centre,true
+medical_cooling_trailer,library,false
+medical_cooling_trailer,school,true

@@ -1,0 +1,5 @@
+zone_id,name,need_units,vulnerability_index,deadline_hours,capacity_units,handling_supported,zone_type,lat,lon,request_seq,served_units,version
+Z1,Downtown,40,0.2,48,,ambient|chilled,pantry,,,1,0,1
+Z2,Eastside,30,0.9,12,,ambient,pantry,,,2,0,1
+Z3,Riverside,30,0.7,24,,ambient|chilled,pantry,,,3,0,1
+Z4,Hills,20,0.5,72,,ambient,pantry,,,4,0,1

@@ -1,0 +1,17 @@
+zone_id,name,need_units,vulnerability_index,deadline_hours,capacity_units,handling_supported,zone_type,lat,lon,request_seq,served_units,version,no_vehicle_share
+Z01,Harbor Flats,120,0.92,12,,ambient|chilled,pantry,37.790,-122.290,9,0,1,0.48
+Z02,Mill Creek,80,0.85,6,60,ambient,shelter,37.860,-122.200,12,0,1,0.41
+Z03,Old Town,150,0.40,48,,ambient|chilled|frozen,pantry,37.805,-122.270,1,0,1,0.22
+Z04,Riverbend,90,0.78,24,,ambient,senior_center,37.740,-122.180,5,0,1,0.37
+Z05,Northgate,110,0.30,72,,ambient|frozen,pantry,37.830,-122.260,2,0,1,0.15
+Z06,Eastfield,70,0.88,8,,ambient,pantry,37.720,-122.100,14,0,1,0.52
+Z07,Lakeside,60,0.55,36,,ambient,school,37.810,-122.250,3,0,1,0.20
+Z08,Pine Hollow,50,0.95,4,40,ambient,shelter,37.950,-122.050,16,0,1,0.60
+Z09,Cannery Row,100,0.65,24,,ambient,pantry,37.780,-122.230,6,0,1,0.33
+Z10,Southport,130,0.72,18,,ambient|frozen,pantry,37.700,-122.220,8,0,1,0.44
+Z11,Westview,40,0.25,72,,ambient,school,37.800,-122.300,4,0,1,0.10
+Z12,Orchard Hill,70,0.60,48,,ambient,senior_center,37.880,-122.300,7,0,1,0.28
+Z13,Bayview Shelter,60,0.82,10,50,ambient,shelter,37.760,-122.210,10,0,1,0.55
+Z14,Granite Ridge,45,0.70,24,,ambient,pantry,37.980,-122.150,15,0,1,0.46
+Z15,Market Square,90,0.35,48,,ambient|frozen,pantry,37.802,-122.275,11,0,1,0.18
+Z16,Tidewater,55,0.90,6,,ambient|chilled,senior_center,37.660,-122.120,13,0,1,0.58

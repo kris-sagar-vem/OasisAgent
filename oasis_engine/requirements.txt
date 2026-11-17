@@ -1,0 +1,6 @@
+# Runtime deps for the deployed agent (adk deploy copies only this folder).
+google-adk[gcp]==2.14.1
+google-cloud-bigquery==3.47.0
+scipy==1.18.1
+pydantic==2.14.3
+PyYAML==6.0.3

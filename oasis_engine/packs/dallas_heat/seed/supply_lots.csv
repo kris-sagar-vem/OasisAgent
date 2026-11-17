@@ -1,0 +1,9 @@
+lot_id,category,quantity_total,quantity_remaining,expiry_hours,handling,origin_id,origin_lat,origin_lon,version
+LOT_COOL_01,mobile_hvac_truck,1200,1200,12,hvac_active,DEPOT_DALLAS_CITY_HALL,32.7767,-96.7970,1
+LOT_COOL_02,rapid_shade_canopy,800,800,,hvac_active,DEPOT_DALLAS_CITY_HALL,32.7767,-96.7970,1
+LOT_COOL_03,mobile_hydration_unit,1500,1500,6,hvac_active,DEPOT_FAIR_PARK,32.7818,-96.7600,1
+LOT_COOL_04,generator_ac_trailer,600,600,24,generator_backup,DEPOT_FAIR_PARK,32.7818,-96.7600,1
+LOT_COOL_05,emergency_fan_bank,900,900,,hvac_active,DEPOT_DALLAS_CITY_HALL,32.7767,-96.7970,1
+LOT_COOL_06,electrolyte_water_pallet,2000,2000,8,hvac_active,DEPOT_FAIR_PARK,32.7818,-96.7600,1
+LOT_COOL_07,misting_tent_system,750,750,14,hvac_active,DEPOT_DALLAS_CITY_HALL,32.7767,-96.7970,1
+LOT_COOL_08,medical_cooling_trailer,400,400,18,generator_backup,DEPOT_FAIR_PARK,32.7818,-96.7600,1

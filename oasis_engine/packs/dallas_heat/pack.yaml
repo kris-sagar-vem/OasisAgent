@@ -1,0 +1,63 @@
+# Dallas Urban Heat Resilience Pack (OasisAgent - Challenge 1)
+# Real City of Dallas infrastructure, NOAA Heat Watch microclimates & US Census TIGER demographics.
+meta:
+  id: dallas_heat
+  title: "Dallas Heat Island Resilience: 16 Frontline Zones, 8 Cooling Assets, 2 Emergency Depots"
+  track: public_health
+  disclaimer: "Data synthesized from NOAA Heat Watch Dallas, US Census ACS 2020 & TIGER boundaries. Siting weights represent municipal policy choices."
+
+entities:
+  zones:
+    table: zones
+    columns:
+      need: need_units
+      vulnerability: vulnerability_index
+      deadline_h: deadline_hours
+      capacity: capacity_units
+      handling: handling_supported
+      served: served_units
+    extra: [no_vehicle_share, heat_offset_f]
+  lots:
+    table: supply_lots
+    columns:
+      quantity: quantity_remaining
+      expiry_h: expiry_hours
+      lat: origin_lat
+      lon: origin_lon
+  eligibility:
+    table: eligibility
+  conditions:
+    table: conditions
+
+scoring:
+  - {term: vulnerability, weight: 0.35, params: {label: "poverty vulnerability index"}}
+  - {term: urgency, weight: 0.20, params: {horizon_h: 24, label: "heatwave onset urgency"}}
+  - {term: need_share, weight: 0.15, params: {label: "neighborhood population footprint"}}
+  - {term: attr_share, weight: 0.15, params: {column: no_vehicle_share, label: "transit-dependent households (no car)"}}
+  - {term: condition, weight: 0.15, params: {factor: heat_hazard, label: "microclimate heat offset severity"}}
+
+constraints:
+  - {name: handling}
+  - {name: expiry, params: {safety_margin_h: 0.5}}
+  - {name: deadline}
+  - {name: eligibility}
+
+strategy:
+  name: fair_lp
+  params: {alpha: 0.25, lambda_perishable: 1.0}
+  baselines: [nearest_first, fcfs, priority_greedy]
+
+travel: {mode: haversine, speed_kmh: 35}
+
+conditions:
+  provider: static
+  max_age_minutes: 720
+
+vocabulary: 
+  zone: neighborhood facility
+  zones: neighborhood facilities
+  unit: people served
+  lot: emergency cooling asset
+
+metrics:
+  headline: vwu

@@ -1,0 +1,9 @@
+lot_id,category,quantity_total,quantity_remaining,expiry_hours,handling,origin_id,origin_lat,origin_lon,version
+L01,shelf_stable,220,220,,ambient,DEPOT_N,37.820,-122.270,1
+L02,produce,120,120,2.0,chilled,DEPOT_N,37.820,-122.270,1
+L03,dairy,80,80,3.0,chilled,DEPOT_S,37.730,-122.200,1
+L04,frozen_meals,90,90,24,frozen,DEPOT_S,37.730,-122.200,1
+L05,infant_formula,40,40,,ambient,DEPOT_N,37.820,-122.270,1
+L06,shelf_stable,150,150,,ambient,DEPOT_S,37.730,-122.200,1
+L07,produce,60,60,1.0,chilled,DEPOT_S,37.730,-122.200,1
+L08,hygiene_kits,50,50,,ambient,DEPOT_N,37.820,-122.270,1
